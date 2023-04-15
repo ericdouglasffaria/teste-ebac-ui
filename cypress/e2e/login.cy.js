@@ -22,6 +22,3 @@ context('Funcionalidade login', () => {
     cy.get('.woocommerce-form > .button').click();
   });
 });
-
-// aluno_ebac@teste.com
-// teste@teste.com
