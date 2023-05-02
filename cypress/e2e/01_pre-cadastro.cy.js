@@ -1,10 +1,10 @@
 /// <reference types="cypress"/>
 var faker = require('faker');
-const Faker = require('faker/lib');
+const faker = require('faker/lib');
 
-describe('Funcionalidade Pré Cadastro', () => {
+describe('Funcionalidade Realizar Pré Cadastro', () => {
   beforeEach(() => {
-    cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/');
+    cy.visit('minha-conta');
   });
 
   it('Deve Realizar o login com sucesso', () => {
@@ -13,7 +13,7 @@ describe('Funcionalidade Pré Cadastro', () => {
     let emailFaker = faker.internet.email(nomeFaker);
 
     cy.get('#reg_email').type(emailFaker);
-    cy.get('#reg_password').type('!@ed2002002023ED!@');
+    cy.get('#reg_password').type('!@ebac2023!@');
     cy.get(':nth-child(4) > .button').click();
 
     cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click();

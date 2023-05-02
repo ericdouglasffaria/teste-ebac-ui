@@ -1,17 +1,17 @@
 /// <reference types="cypress"/>
 
-describe('Funcionalidade Página de produtos:', () => {
+describe('Funcionalidade: Adicionar Produtos no Carrinho:', () => {
   beforeEach(() => {
-    cy.visit('http://lojaebac.ebaconline.art.br/produtos/');
+    cy.visit('produtos');
   });
 
-  it('Deve Selecionar um produto:', () => {
-    cy.get('[class="product-block grid"]')
-      .contains('Abominable Hoodie')
-      .click();
+  afterEach(() => {
+    cy.screenshot();
   });
 
-  it.only('Deve Adicionar produto no carrinho:', () => {
+  //-- SELECIONAR E ADD PRODUTOS PARA COMPRA--//
+
+  it('Deve Adicionar produtos no carrinho:', () => {
     var quantidade = 10;
 
     cy.get('[class="product-block grid"]')
