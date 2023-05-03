@@ -5,10 +5,6 @@ describe('Funcionalidade: Adicionar Produtos no Carrinho:', () => {
     cy.visit('produtos');
   });
 
-  afterEach(() => {
-    cy.screenshot();
-  });
-
   //-- EXEMPLO 01 -  SELECIONAR E ADD PRODUTOS NO CARRINHO--//
 
   it('Deve Adicionar produtos ao carrinho:', () => {
