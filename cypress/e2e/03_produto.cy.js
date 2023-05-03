@@ -30,9 +30,14 @@ describe('Funcionalidade: Adicionar Produtos no Carrinho:', () => {
     );
   });
 
-  //-- EXEMPLO 02 - SELECIONAR E ADD PRODUTOS NOCARINHO "USANDO COMANDOS CUSTOMIZADOS" --//
+  //-- EXEMPLO 02 - SELECIONAR E ADD PRODUTOS NOCARINHO "USANDO COMANDOS CUSTOMIZADOS"
+  //-- USANDO O ARQUIVO "COMMANDS.JS"
 
-  it.only('Deve Adicionar Produtos ao Carrinho 02', () => {
-    cy.addProduto('Abominable Hoodie', 10);
+  it('Deve Adicionar Produtos ao Carrinho 02', () => {
+    cy.addProduto('Abominable Hoodie', 'M', 'Blue', 2);
+  });
+
+  it('Deve Adicionar Produtos ao Carrinho 03', () => {
+    cy.addProduto('Ariel Roll Sleeve Sweatshirt', 'XS', 'Red', 5);
   });
 });
