@@ -9,9 +9,9 @@ describe('Funcionalidade: Adicionar Produtos no Carrinho:', () => {
     cy.screenshot();
   });
 
-  //-- SELECIONAR E ADD PRODUTOS PARA COMPRA--//
+  //-- EXEMPLO 01 -  SELECIONAR E ADD PRODUTOS NO CARRINHO--//
 
-  it('Deve Adicionar produtos no carrinho:', () => {
+  it('Deve Adicionar produtos ao carrinho:', () => {
     var quantidade = 10;
 
     cy.get('[class="product-block grid"]')
@@ -28,5 +28,11 @@ describe('Funcionalidade: Adicionar Produtos no Carrinho:', () => {
       'contain',
       quantidade + ' × “Abominable Hoodie” foram adicionados no seu carrinho.'
     );
+  });
+
+  //-- EXEMPLO 02 - SELECIONAR E ADD PRODUTOS NOCARINHO "USANDO COMANDOS CUSTOMIZADOS" --//
+
+  it.only('Deve Adicionar Produtos ao Carrinho 02', () => {
+    cy.addProduto('Abominable Hoodie', 10);
   });
 });

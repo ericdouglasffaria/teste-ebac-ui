@@ -11,7 +11,7 @@ context('Funcionalidade Realizar login na EBAC', () => {
   });
 
   //-- EXEMPLO 01 - EXECUÇÃO TESTE USANDO ARQUIVO DE DADOS "CRIAR ARRQUIVO .JSON"--//
-  it('Deve Realiar o Login com Sucesso - Usando Arquivo de Dados', () => {
+  it('Deve Realizar o Login com Sucesso - Usando Arquivo de Dados', () => {
     cy.get('#username').type(perfil.usuario);
     cy.get('#password').type(perfil.senha);
     cy.get('.woocommerce-form > .button').click();
@@ -22,7 +22,7 @@ context('Funcionalidade Realizar login na EBAC', () => {
   });
 
   //-- EXEMPLO 02 - EXECUÇÃO TESTE USANDO UMA FIXTURE "USAR O ARQUIVO COMMANDS.JS" --//
-  it.only('Deve fazer login com sucesso - Usando Fixture', () => {
+  it('Deve Realizar o Login com sucesso - Usando Arquivos de Fixture', () => {
     cy.fixture('perfil').then((dados) => {
       cy.get('#username').type(dados.usuario, { log: true });
       cy.get('#password').type(dados.senha, { log: false });
@@ -35,7 +35,7 @@ context('Funcionalidade Realizar login na EBAC', () => {
   });
 
   //-- EXEMPLO 03 - EXECUÇÃO TESTE COMPLETO PADRÃO --//
-  it('Deve Realizar Login com Sucesso.', () => {
+  it('Deve Realizar o Login com Sucesso.', () => {
     cy.get('#username').type('aluno_ebac@teste.com');
     cy.get('#password').type('teste@teste.com');
     cy.get('.woocommerce-form > .button').click();
