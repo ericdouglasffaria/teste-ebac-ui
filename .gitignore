@@ -28,7 +28,7 @@ Latest commit ff3bb2b 8 minutes ago
  History
  1 contributor
 104 lines (76 sloc)  1.57 KB
- 
+
 
 # Logs
 logs
@@ -72,6 +72,12 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+videos/
+screenshots/
+support/
+results/
+fixtures
+downloads/
 
 # TypeScript v1 declaration files
 typings/
