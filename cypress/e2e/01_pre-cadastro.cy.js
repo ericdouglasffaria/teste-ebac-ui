@@ -7,6 +7,10 @@ describe('Funcionalidade Realizar Pré Cadastro', () => {
     cy.visit('minha-conta');
   });
 
+  afterEach(() => {
+    cy.screenshot();
+  });
+
   //-- EXEMPLO 01 - EXECUÇÃO TESTE PRE CADASTRO --//
 
   it('Deve Realizar o Pré Cadastro com sucesso 01', () => {

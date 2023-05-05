@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+  projectId: '8wwozg',
   e2e: {
     //projectId: '93yhz3',
     reporter: 'mochawesome',
@@ -8,7 +9,7 @@ module.exports = defineConfig({
       reportDir: 'cypress/results',
       overwrite: false,
       html: true,
-      json: true,
+      json: false,
     },
     browser: 'Chrome',
     video: true,
